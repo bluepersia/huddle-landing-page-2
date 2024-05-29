@@ -12,7 +12,7 @@ body {
     margin: 0;
     background-color: var(--c-Purple);
     background-image: url(../images/bg-mobile.svg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -46,12 +46,14 @@ body {
 }
 
 
-#btn 
+#main__btn 
 {
     font-family: var(--f-Headings);
+    color: var(--c-Purple);
+    font-size: 1rem;
 }
 
-@media (min-width:1000px)
+@media (min-width:1200px)
 {
     html {
         font-size: 18px;
@@ -60,5 +62,132 @@ body {
     #main__title 
     {
         font-size: 3.3rem;
+    }
+}
+
+
+/* Layout */
+
+body {
+    padding: 2.5em 9%;
+    min-height: 100vh;
+}
+
+#header__logo 
+{
+    width: 150px;
+    margin-bottom: 4em;
+}
+
+#main{
+    text-align: center;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3.75em;
+}
+
+#main__img {
+    width: 100%;
+    display: block;
+    max-width: 450px;
+}
+
+
+#main__btn {
+    background-color: var(--c-White);
+    border:none;
+    padding: .75em 4.68em;
+    border-radius: 32px;
+    box-shadow: 1px 3px 5px hsla(0, 0%, 0%, 27%);
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+#main__btn:hover {
+    background-color: var(--c-Pink);
+    box-shadow: 2px 4px 9px 3px hsla(0, 0%, 0%, 27%);
+}
+
+#footer__social 
+{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap:0.68em;
+}
+
+.footer__social-item 
+{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border:solid 1px var(--c-White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:border 300ms;
+}
+
+.footer__social-item:hover {
+    border-color: var(--c-Pink);
+}
+
+.footer__social-icon {
+    transition:color 300ms;
+}
+
+.footer__social-item:hover .footer__social-icon {
+    color: var(--c-Pink);
+}
+
+.footer__social-icon 
+{
+    transform: scale(.75);
+}
+
+
+@media (min-width:1200px)
+{
+
+    body {
+        background-image: url(../images/bg-desktop.svg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #header__logo {
+        width: 264px;
+    }
+    #main {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #main__img {
+    max-width: 696px;
+    }
+
+
+
+
+    #footer__social 
+    {
+        justify-content: end;
+    }
+
+    .footer__social-item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__social-icon {
+        transform: scale(1);
     }
 }
