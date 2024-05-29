@@ -3,6 +3,8 @@
     --c-Purple: #684BB1;
     --c-Pink: #E880E8;
     --c-White:white;
+
+    --f-Headings: "Poppins", sans-serif;
 }
 
 
@@ -25,4 +27,38 @@ body {
 * :last-child 
 {
     margin-bottom: 0;
+}
+
+
+/* Typography */
+
+body {
+    color: var(--c-White);
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+}
+
+#main__title 
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--f-Headings);
+}
+
+
+#btn 
+{
+    font-family: var(--f-Headings);
+}
+
+@media (min-width:1000px)
+{
+    html {
+        font-size: 18px;
+    }
+
+    #main__title 
+    {
+        font-size: 3.3rem;
+    }
 }
