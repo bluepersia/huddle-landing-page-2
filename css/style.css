@@ -1,0 +1,28 @@
+:root 
+{
+    --c-Purple: #684BB1;
+    --c-Pink: #E880E8;
+    --c-White:white;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--c-Purple);
+    background-image: url(../images/bg-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child {
+    margin-top: 0;
+}
+
+* :last-child 
+{
+    margin-bottom: 0;
+}
